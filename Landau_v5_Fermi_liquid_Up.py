@@ -8,9 +8,9 @@ from pathlib import Path
 import numpy as np
 
 DEFAULTS = (
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_2971.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_plus_1727.csv",
+    "/data/loto7_4698_k80.csv",
+    "/data/loto7_4698_k80_loto_2971.csv",
+    "/data/loto7_4698_k80_loto_plus_1727.csv",
 )
 
 N, K, D, WINDOW, CONTEXT = 39, 7, 8, 64, 17
@@ -476,7 +476,7 @@ if __name__ == "__main__":
 
 
 """
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80.csv; redova=4698
+Ulaz: /data/loto7_4698_k80.csv; redova=4698
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -490,7 +490,7 @@ LANDAU V5 FERMI-LIQUID: prosek=1.1562; pogodaka 0..7=[13, 31, 17, 3, 0, 0, 0, 0]
 Prethodna kombinacija: prosek=1.2188; pogodaka 0..7=[13, 30, 16, 4, 1, 0, 0, 0]
 Isto polje bez interakcija: prosek=1.1406; pogodaka 0..7=[13, 33, 14, 4, 0, 0, 0, 0]
 Poslednji red: 4,12,18,28,35,36,37
-SLEDECI RED 4699: 6,7,8,9,15,29,32
+SLEDECI RED 4699: 6,x,8,y,15,z,32
 E=-0.5376452701; kandidata=14396
 Norma matrice interakcija=0.151043
 Izbor: poslednje 64 kombinacije i sve njihove zamene jednog broja.
@@ -498,7 +498,7 @@ E rangira cele kombinacije; nije verovatnoca.
 
 
 
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_2971.csv; redova=2971
+Ulaz: /data/loto7_4698_k80_loto_2971.csv; redova=2971
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -512,7 +512,7 @@ LANDAU V5 FERMI-LIQUID: prosek=1.3281; pogodaka 0..7=[13, 25, 18, 8, 0, 0, 0, 0]
 Prethodna kombinacija: prosek=1.2969; pogodaka 0..7=[11, 30, 16, 7, 0, 0, 0, 0]
 Isto polje bez interakcija: prosek=1.3906; pogodaka 0..7=[13, 24, 18, 7, 2, 0, 0, 0]
 Poslednji red: 18,20,21,24,29,34,38
-SLEDECI RED 2972: 4,5,7,16,28,29,30
+SLEDECI RED 2972: 4,x,7,y,28,z,30
 E=-1.8964331428; kandidata=14392
 Norma matrice interakcija=1.227234
 Izbor: poslednje 64 kombinacije i sve njihove zamene jednog broja.
@@ -520,7 +520,7 @@ E rangira cele kombinacije; nije verovatnoca.
 
 
 
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_plus_1727.csv; redova=1727
+Ulaz: /data/loto7_4698_k80_loto_plus_1727.csv; redova=1727
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -534,7 +534,7 @@ LANDAU V5 FERMI-LIQUID: prosek=1.0156; pogodaka 0..7=[19, 27, 16, 2, 0, 0, 0, 0]
 Prethodna kombinacija: prosek=1.2969; pogodaka 0..7=[15, 23, 18, 8, 0, 0, 0, 0]
 Isto polje bez interakcija: prosek=1.2969; pogodaka 0..7=[12, 28, 18, 5, 1, 0, 0, 0]
 Poslednji red: 4,12,18,28,35,36,37
-SLEDECI RED 1728: 3,5,12,13,14,15,23
+SLEDECI RED 1728: 3,x,12,y,14,z,23
 E=-0.6579717101; kandidata=14388
 Norma matrice interakcija=0.135695
 Izbor: poslednje 64 kombinacije i sve njihove zamene jednog broja.
@@ -547,9 +547,9 @@ E rangira cele kombinacije; nije verovatnoca.
 Uklonjeni su prosečna referentna distribucija i početni aritmetički nizovi.
 
 Fajl	                Sledeća kombinacija	V5 — prosek na 64 kola	Prethodna kombinacija	Bez interakcija
-Objedinjeni, red 4699	6,7,8,9,15,29,32	1,1562	                1,2188	                1,1406
-Loto, red 2972	        4,5,7,16,28,29,30	1,3281	                1,2969	                1,3906
-Loto Plus, red 1728	    3,5,12,13,14,15,23	1,0156	                1,2969	                1,2969
+Objedinjeni, red 4699	6,x,8,y,15,z,32	    1,1562	                1,2188	                1,1406
+Loto, red 2972	        4,x,7,y,28,z,30	    1,3281	                1,2969	                1,3906
+Loto Plus, red 1728	    3,x,12,y,14,z,23	1,0156	                1,2969	                1,2969
 
 Proverene su efektivne energije kvazičestica, svih 224 pojedinačnih zamena, ponovljivost i hronologija. 
 Pretraga obuhvata poslednje 64 kombinacije i sve njihove zamene jednog broja.
