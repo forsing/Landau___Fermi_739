@@ -9,9 +9,9 @@ import numpy as np
 
 
 
-# DEFAULT = "/Users/4c/Desktop/GHQ/data/loto7_4698_k80.csv"
-# DEFAULT = "/Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_2971.csv"
-DEFAULT = "/Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_plus_1727.csv"
+DEFAULT = "/data/loto7_4698_k80.csv"
+# DEFAULT = "/data/loto7_4698_k80_loto_2971.csv"
+# DEFAULT = "/data/loto7_4698_k80_loto_plus_1727.csv"
 
 
 
@@ -457,7 +457,7 @@ if __name__ == "__main__":
 
 
 """
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80.csv; redova=4698
+Ulaz: /data/loto7_4698_k80.csv; redova=4698
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -471,16 +471,14 @@ LANDAU V5 FERMI-LIQUID: prosek=1.2969; pogodaka 0..7=[14, 28, 14, 5, 3, 0, 0, 0]
 Prethodna kombinacija: prosek=1.2188; pogodaka 0..7=[13, 30, 16, 4, 1, 0, 0, 0]
 Isto polje bez interakcija: prosek=1.0312; pogodaka 0..7=[20, 25, 16, 3, 0, 0, 0, 0]
 Poslednji red: 4,12,18,28,35,36,37
-SLEDECI RED 4699: 8,9,20,21,31,32,33
+SLEDECI RED 4699: 8,x,20,y,31,z,33
 E=-1.4735332240; iteracija=11
 Norma matrice interakcija=2.486924
 E rangira cele kombinacije. Pretraga je deterministicka; globalni minimum nije potvrden.
 
 
 
-
-
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_2971.csv; redova=2971
+Ulaz: /data/loto7_4698_k80_loto_2971.csv; redova=2971
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -494,16 +492,14 @@ LANDAU V5 FERMI-LIQUID: prosek=1.1250; pogodaka 0..7=[18, 27, 13, 5, 1, 0, 0, 0]
 Prethodna kombinacija: prosek=1.2969; pogodaka 0..7=[11, 30, 16, 7, 0, 0, 0, 0]
 Isto polje bez interakcija: prosek=1.1094; pogodaka 0..7=[18, 27, 15, 2, 2, 0, 0, 0]
 Poslednji red: 18,20,21,24,29,34,38
-SLEDECI RED 2972: 8,9,15,25,31,32,33
+SLEDECI RED 2972: 8,x,15,y,31,z,33
 E=-1.4279842420; iteracija=11
 Norma matrice interakcija=2.222006
 E rangira cele kombinacije. Pretraga je deterministicka; globalni minimum nije potvrden.
 
 
 
-
-
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_plus_1727.csv; redova=1727
+Ulaz: /data/loto7_4698_k80_loto_plus_1727.csv; redova=1727
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -517,7 +513,7 @@ LANDAU V5 FERMI-LIQUID: prosek=1.3125; pogodaka 0..7=[16, 21, 19, 7, 1, 0, 0, 0]
 Prethodna kombinacija: prosek=1.2969; pogodaka 0..7=[15, 23, 18, 8, 0, 0, 0, 0]
 Isto polje bez interakcija: prosek=1.1719; pogodaka 0..7=[18, 27, 11, 6, 2, 0, 0, 0]
 Poslednji red: 4,12,18,28,35,36,37
-SLEDECI RED 1728: 6,15,16,17,24,25,33
+SLEDECI RED 1728: 6,x,16,y,24,z,33
 E=-1.4336529176; iteracija=13
 Norma matrice interakcija=2.186660
 E rangira cele kombinacije. Pretraga je deterministicka; globalni minimum nije potvrden.
@@ -525,29 +521,23 @@ E rangira cele kombinacije. Pretraga je deterministicka; globalni minimum nije p
 
  
 
-
 """
 V5 LANDAU      FERMI-LIQUID THEORY interacting fermions at low temperatures
 
-
-Pripremiću zaseban V5 — LANDAU FERMI-LIQUID. Potražiću način da ideju kvazičestica i njihovih međusobnih uticaja prenesem na predikciju cele kombinacije, pa model proveriti na istom fajlu.
-
-
+LANDAU FERMI-LIQUID. Ideju kvazičestica i njihovih međusobnih uticaja prenosim na predikciju cele kombinacije.
 
 V5 će ocenjivati kombinaciju energetskim funkcionalom sa učenim međusobnim interakcijama. Pri pretrazi, zamena jednog broja menjaće i efektivne ocene ostalih — to je konkretna primena Landauove ideje kvazičestica.
 
+Model uči energetski funkcional cele kombinacije i međusobne interakcije. Efektivna ocena jednog broja zavisi od ostalih izabranih brojeva — primena Landauove ideje kvazičestica. 
 
-
-V5 — LANDAU FERMI-LIQUID je završena i proverena.
-Model uči energetski funkcional cele kombinacije i međusobne interakcije. Efektivna ocena jednog broja zavisi od ostalih izabranih brojeva — primena Landauove ideje kvazičestica. Originalni rad
 Predlog za red 4699:
-8, 9, 20, 21, 31, 32, 33
+8, x, 20, y, 31, z, 33
+
 Na poslednja 64 kola:
 Metod	Prosečan broj pogodaka
 V5	1,2969
 Prethodna kombinacija	1,2188
 Isto polje bez interakcija	1,0312
-
 
 Provereni su interakcije, efektivne energije, hronologija, ponovljivost i svih 224 pojedinačnih zamena završne kombinacije. Globalni minimum nije potvrđen.
 """
